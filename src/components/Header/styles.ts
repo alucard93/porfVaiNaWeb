@@ -6,6 +6,7 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 80px;
+  padding: 0 64px;
   background-color: blue;
 
   .title-h1 {
@@ -14,13 +15,15 @@ export const NavbarContainer = styled.div`
 
   .wrapper-header {
     width: 100%;
+    max-width: 320px;
   }
 
   .container-itens-personal {
     display: flex;
+    justify-content: end;
+
     width: 100%;
     list-style-type: none;
-    background-color: red;
   }
 
   .items-personal {
