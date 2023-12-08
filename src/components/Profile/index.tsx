@@ -6,13 +6,13 @@ const Profile = () => {
     <ProfileContainer>
       <img src="" alt="" />
       <div>
-        <h2>Olá! Sejá bem vindo ao meu Portfólio</h2>
+        <h2>Olá!</h2>
       </div>
-      <div>
+      {/* <div>
         <img src="" alt="imagem 1" />
         <img src="" alt="imagem 2" />
         <img src="" alt="imagem 3" />
-      </div>
+      </div> */}
     </ProfileContainer>
   )
 }
