@@ -1,17 +1,29 @@
 import { NavbarContainer } from './styles'
 import { Link, NavLink } from 'react-router-dom'
+
+const menu = [
+  { title: 'Contacts', id: 'contacts', link: 'contacts' },
+  // { title: 'FAQ', id: 'faq', link: '#' }
+]
+
 const Header = () => {
   return (
-    <NavbarContainer>
-      <h1 className="title-h1">Marcus Vinicius</h1>
-      <nav className="wrapper-header">
-        <ul className="container-itens-personal">
-          <Link to="/contacts" className="itens-personal">
-            <li className="items-personal">Contatos</li>
+    <header className="header">
+      <div className="container">
+        <nav className="header__navigation">
+          <Link to={'/'} className="header__logo">
+            <h1>Marcus Vinicius</h1>
           </Link>
-        </ul>
-      </nav>
-    </NavbarContainer>
+          <ul className="header__menu">
+            {menu.map((item) => (
+              <li key={item.id}>
+                <Link to={item.link}>{item.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
   )
 }
 
